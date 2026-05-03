@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Cahaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@300;500;700&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: #0a0101;
+            color: #fff;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Background Love Animasi */
+        .bg-love {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle at center, #450a0a 0%, #000 100%);
+            z-index: -1;
+        }
+
+        .heart-bg {
+            position: absolute;
+            color: rgba(255, 77, 109, 0.2);
+            font-size: 20px;
+            animation: float 6s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* --- Content --- */
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        /* Nama Cahaya */
+        .name-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 75px;
+            background: linear-gradient(to bottom, #ff4d6d, #ffb7c5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 0 15px rgba(255, 77, 109, 0.5));
+        }
+
+        .sub-title {
+            font-size: 14px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: #ffb7c5;
+            margin-bottom: 60px;
+            opacity: 0.8;
+        }
+
+        /* Teks Romantis */
+        .romantic-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            line-height: 1.8;
+            margin-bottom: 80px;
+            color: #fce4ec;
+            font-style: italic;
+        }
+
+        /* Galeri 3 Foto */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 80px;
+        }
+
+        .photo-card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: translateY(0);
+            transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .photo-card:hover {
+            transform: translateY(-15px) rotate(2deg);
+            border-color: #ff4d6d;
+        }
+
+        .photo-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        /* Animasi Love Bawah */
+        .love-animation {
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .big-heart {
+            font-size: 100px;
+            color: #ff4d6d;
+            animation: pulse 1.5s infinite;
+            text-shadow: 0 0 30px #ff4d6d;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+
+        .footer-text {
+            margin-top: 20px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 30px;
+            color: #ffb7c5;
+        }
+
+        @media (max-width: 600px) {
+            .name-title { font-size: 55px; }
+            .romantic-text { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-love" id="bgLove"></div>
+
+    <div class="container">
+        <div data-aos="zoom-in" data-aos-duration="2000">
+            <h1 class="name-title">Cahaya</h1>
+            <p class="sub-title">Sinar Terindah dalam Hidupku</p>
+        </div>
+
+        <div class="romantic-text" data-aos="fade-up" data-aos-delay="500">
+            "Seperti namamu, kamu datang membawa terang di saat duniaku sedang gelap. Tidak ada kata yang cukup hebat untuk menjelaskan betapa berartinya kehadiranmu bagiku. Tetaplah bersinar, Cahaya..."
+        </div>
+
+        <div class="photo-gallery">
+            <div class="photo-card" data-aos="flip-left" data-aos-delay="200">
+                <img src="cahaya1.jpg" alt="Foto Cahaya 1">
+            </div>
+            <div class="photo-card" data-aos="flip-left" data-aos-delay="400">
+                <img src="cahaya2.jpg" alt="Foto Cahaya 2">
+            </div>
+            <div class="photo-card" data-aos="flip-left" data-aos-delay="600">
+                <img src="cahaya3.jpg" alt="Foto Cahaya 3">
+            </div>
+        </div>
+
+        <div class="love-animation" data-aos="zoom-in">
+            <div class="big-heart">❤</div>
+        </div>
+        <p class="footer-text" data-aos="fade-up">I Love You Forever</p>
+        <p style="font-size: 10px; opacity: 0.5; margin-top: 20px;">Created with love by Restu</p>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        // Buat butiran hati terbang di background
+        const bg = document.getElementById('bgLove');
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart-bg');
+            heart.innerHTML = '❤';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            heart.style.opacity = Math.random();
+            bg.appendChild(heart);
+
+            setTimeout(() => { heart.remove(); }, 6000);
+        }
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
